@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+			name="author"
+			content="Divyansh Muley , Ansh Jain , Karina Rajawat , Sujata More , Kartik Baghel" />
+    <title>TOC LAB</title>
+    <link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+    <link rel="stylesheet" href="styles/fsm_simulator.css" />
+</head>
+
+<body>
+    <div class="content">
+      <nav class="custom-navbar navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="home.html">
+            <span class="brand-icon">⚡</span> TOC Lab
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="toggler-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fsm-simulator.html">Finite State Machine Simulator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="custom-automata-creator.html"
+                  >Automata Creator</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="minimizer.html">DFA Minimizer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nfa2dfa.html">NFA to DFA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fsm2regex.html">FSM to RE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+          <div class="container controls my-4">
+            <h1 class="mb-4">Custom Automata Creator</h1>        
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>Create Automata Easily</h3>
+              </div>
+              <div class="card-body">
+                <p>Use the options below to define states, transitions, and other properties of your Automata.</p>
+                <div class="mb-3">
+                  <button class="btn btn-secondary" id="addState">Add State</button>
+                  <button class="btn btn-danger" id="resetAutomaton">Reset Automaton</button>
+                  <button class="btn btn-success" id="finalizeAutomaton">Create</button>
+                </div>
+        
+                <div class="mb-3">
+                  <h5>Add Alphabet</h5>
+                  <div class="input-group">
+                    <input type="text" id="alphabetSymbol" class="form-control" placeholder="Symbol">
+                    <button class="btn btn-primary" id="addAlphabetBtn">Add</button>
+                  </div>
+                </div>
+        
+                <div class="mb-3">
+                  <h5>Add Transition</h5>
+                  <div class="row g-2">
+                    <div class="col-md-4">
+                      <input type="text" id="fromState" class="form-control" placeholder="From State">
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" id="symbol" class="form-control" placeholder="Symbol">
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" id="toState" class="form-control" placeholder="To State">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-2" id="addTransitionBtn">Add Transition</button>
+                </div>
+        
+                <div class="mb-3">
+                  <h5>Set Accepting State</h5>
+                  <div class="input-group">
+                    <input type="text" id="acceptingState" class="form-control" placeholder="State">
+                    <button class="btn btn-primary" id="setAcceptingStateBtn">Set</button>
+                  </div>
+                </div>
+        
+                <div class="mb-3">
+                  <h5>Set Initial State</h5>
+                  <div class="input-group">
+                    <input type="text" id="initialState" class="form-control" placeholder="State">
+                    <button class="btn btn-primary" id="setInitialStateBtn">Set</button>
+                  </div>
+                </div>
+        
+                <div class="mb-3">
+                  <h5>Current Automaton Configuration:</h5>
+                  <pre id="automatonConfig" class="bg-light p-3 border"></pre>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Graph Display Section -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Automata</h3>
+              </div>
+              <div class="card-body">
+                <div id="automatonGraph"></div>
+              </div>
+            </div>
+          </div>
+          
+          <footer class="bg-dark text-white py-4">
+            <div class="container text-center">
+              <p class="mb-1">&copy; 2025 TOC Lab. All Rights Reserved.</p>
+              <p class="mb-0">
+                Designed and Developed by Divyansh Muley, Ansh Jain, Karina Rajawat,
+                Sujata More, Kartik Baghel
+              </p>
+            </div>
+          </footer>
+        
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+        <script src="../assets/viz.js"></script>
+        <script src="../../lib/browser/toc.js"></script>
+        <script src="scripts/fsm_simulator.js"></script>
+        <script src="scripts/custom-automata.js"></script>
+        </body>
+</html>
