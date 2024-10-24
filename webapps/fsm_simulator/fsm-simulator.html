@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Divyansh Muley , Ansh Jain , Karina Rajawat , Sujata More , Kartik Baghel" />
+		<title>TOC LAB</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles/fsm_simulator.css" />
+	</head>
+	<body>
+		<nav class="custom-navbar navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="home.html">
+					<span class="brand-icon">⚡</span> TOC Lab
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="toggler-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="home.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="fsm-simulator.html"
+								>Finite State Machine Simulator</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="custom-automata-creator.html"
+								>Automata Creator</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="minimizer.html">DFA Minimizer</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="nfa2dfa.html">NFA to DFA</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="fsm2regex.html">FSM to RE</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container my-4">
+			<header class="mb-4 text-center">
+				<h1>Finite Automata Simulator & Manual Creator</h1>
+				<p class="lead">Simulate and create DFAs and NFAs with ease.</p>
+			</header>
+			<ul class="nav nav-tabs" id="inputTabs" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link active"
+						id="scripted-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#scriptedTab"
+						type="button"
+						role="tab"
+						aria-controls="scriptedTab"
+						aria-selected="true">
+						Random/Scripted Automata
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button
+						class="nav-link"
+						id="manual-tab"
+						data-bs-toggle="tab"
+						data-bs-target="#manualTab"
+						type="button"
+						role="tab"
+						aria-controls="manualTab"
+						aria-selected="false">
+						Manual Creation
+					</button>
+				</li>
+			</ul>
+			<div class="tab-content mt-3" id="inputTabsContent">
+				<div
+					class="tab-pane fade show active"
+					id="scriptedTab"
+					role="tabpanel"
+					aria-labelledby="scripted-tab">
+					<div class="card p-3">
+						<h3>Create NFA/DFA (Scripted)</h3>
+						<div class="mb-3">
+							<button id="generateDFA" class="btn btn-primary">
+								Generate Random DFA
+							</button>
+							<button id="generateENFA" class="btn btn-secondary">
+								Generate Random NFA
+							</button>
+						</div>
+						<div class="mb-3">
+							<textarea
+								id="fsm"
+								class="form-control"
+								rows="5"
+								placeholder="Or write your own automaton definition"></textarea>
+						</div>
+						<p id="fsmError" class="text-danger"></p>
+						<button id="createAutomaton" class="btn btn-success">
+							Create Automaton
+						</button>
+					</div>
+				</div>
+				<div
+					class="tab-pane fade"
+					id="manualTab"
+					role="tabpanel"
+					aria-labelledby="manual-tab">
+					<div class="card p-3">
+						<h3>Manual Automaton Creation</h3>
+						<div class="mb-3">
+							<h4>Add State</h4>
+							<input
+								type="text"
+								id="stateName"
+								class="form-control"
+								placeholder="State name" />
+							<div class="form-check form-check-inline mt-2">
+								<input
+									class="form-check-input"
+									type="radio"
+									name="initialState"
+									id="isInitial"
+									value="initial" />
+								<label class="form-check-label" for="isInitial">Initial</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									id="isAccepting" />
+								<label class="form-check-label" for="isAccepting"
+									>Accepting</label
+								>
+							</div>
+							<button id="addState" class="btn btn-outline-primary mt-2">
+								Add State
+							</button>
+						</div>
+						<div class="mb-3">
+							<h4>Add Transition</h4>
+							<label for="fromState" class="form-label">From State</label>
+							<select id="fromState" class="form-select"></select>
+							<label for="transitionSymbol" class="form-label mt-2">
+								Symbol (use ε for epsilon)
+							</label>
+							<input
+								type="text"
+								id="transitionSymbol"
+								class="form-control"
+								placeholder="Transition Symbol" />
+							<label for="toState" class="form-label mt-2">To State</label>
+							<select id="toState" class="form-select"></select>
+							<button id="addTransition" class="btn btn-outline-primary mt-2">
+								Add Transition
+							</button>
+						</div>
+						<div class="mb-3">
+							<h4>Current States</h4>
+							<ul id="stateList" class="list-group"></ul>
+						</div>
+						<div class="mb-3">
+							<h4>Current Transitions</h4>
+							<ul id="transitionList" class="list-group"></ul>
+						</div>
+						<div class="mb-3">
+							<label for="manualType" class="form-label">Automaton Type:</label>
+							<select id="manualType" class="form-select">
+								<option value="NFA" selected>NFA</option>
+								<option value="DFA">DFA</option>
+							</select>
+						</div>
+						<button id="generateManualAutomaton" class="btn btn-info">
+							Generate Automaton from Manual Input
+						</button>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="card p-3">
+				<h3>Simulate Automaton</h3>
+				<div class="mb-3">
+					<button id="generateRandomString" class="btn btn-primary" disabled>
+						Random String
+					</button>
+					<button
+						id="generateRandomAcceptableString"
+						class="btn btn-success"
+						disabled>
+						Acceptable String
+					</button>
+					<button
+						id="generateRandomUnacceptableString"
+						class="btn btn-danger"
+						disabled>
+						Unacceptable String
+					</button>
+				</div>
+				<div class="mb-3">
+					<input
+						id="inputString"
+						type="text"
+						class="form-control"
+						placeholder="Input string to simulate"
+						disabled />
+				</div>
+				<div class="mb-3">
+					<button id="startStop" class="btn btn-warning" disabled>Start</button>
+					<button id="inputPrevious" class="btn btn-outline-secondary" disabled>
+						Previous
+					</button>
+					<button id="inputNext" class="btn btn-outline-secondary" disabled>
+						Next
+					</button>
+				</div>
+				<p>(It reads 2 symbols as input at a time)</p>
+				<p id="inputError" class="text-danger"></p>
+			</div>
+			<div class="card p-3 mt-4">
+				<h3>Transition Graph</h3>
+				<p class="small">
+					The FSM transition graph is displayed below. Current states are
+					highlighted.
+				</p>
+				<div id="automatonGraph" class="border rounded p-3"></div>
+			</div>
+		</div>
+		<footer class="bg-dark text-white py-4">
+			<div class="container text-center">
+				<p class="mb-1">&copy; 2025 TOC Lab. All Rights Reserved.</p>
+				<p class="mb-0">
+					Designed and Developed by Divyansh Muley, Ansh Jain, Karina Rajawat,
+					Sujata More, Kartik Baghel
+				</p>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../assets/viz.js"></script>
+		<script src="../../lib/browser/toc.js"></script>
+		<script src="scripts/fsm_simulator.js"></script>
+	</body>
+</html>
