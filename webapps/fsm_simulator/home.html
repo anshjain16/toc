@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Divyansh Muley, Ansh Jain, Karina Rajawat, Sujata More, Kartik Baghel" />
+		<title>TOC LAB</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles/home.css" />
+	</head>
+	<body>
+		<nav class="custom-navbar navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="home.html">
+					<span class="brand-icon">⚡</span> TOC Lab
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="toggler-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="home.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="fsm-simulator.html"
+								>Finite State Machine Simulator</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="custom-automata-creator.html"
+								>Automata Creator</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="minimizer.html">DFA Minimizer</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="nfa2dfa.html">NFA to DFA</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="fsm2regex.html">FSM to RE</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="hero d-flex align-items-center justify-content-center">
+			<div class="hero-overlay"></div>
+			<div class="hero-content text-center">
+				<h1 class="display-3 text-white">Welcome to TOC Lab</h1>
+				<p class="lead text-white">
+					Explore, simulate, and create Finite Automata with our comprehensive
+					suite of tools.
+				</p>
+				<a href="#features" class="btn btn-light btn-lg mt-3"
+					>Explore Features</a
+				>
+			</div>
+		</section>
+		<section id="features" class="py-5">
+			<div class="container">
+				<h2 class="mb-4 text-center">Our Features</h2>
+				<div class="row row-cols-1 row-cols-md-3 g-4">
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="images/fsm-simulator.png"
+								class="card-img-top"
+								alt="Simulator" />
+							<div class="card-body">
+								<h5 class="card-title">Finite Automata Simulator</h5>
+								<p class="card-text">
+									Simulate DFAs and NFAs interactively with step-by-step
+									visualizations and detailed state transitions.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="fsm-simulator.html" class="btn btn-primary w-100"
+									>Launch Simulator</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="images/custom-automata.png"
+								class="card-img-top"
+								alt="Automata Creator" />
+							<div class="card-body">
+								<h5 class="card-title">Automata Creator</h5>
+								<p class="card-text">
+									Build your own automata with our custom creator. Define
+									states, transitions, and experiment with your own designs.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a
+									href="custom-automata-creator.html"
+									class="btn btn-primary w-100"
+									>Create Automata</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="images/minimizer.png"
+								class="card-img-top"
+								alt="Minimizer" />
+							<div class="card-body">
+								<h5 class="card-title">DFA Minimizer</h5>
+								<p class="card-text">
+									Optimize your DFAs by minimizing the number of states, making
+									your automata more efficient and easier to understand.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="minimizer.html" class="btn btn-primary w-100"
+									>Minimize DFA</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="images/nfa2dfa.png"
+								class="card-img-top"
+								alt="NFA to DFA" />
+							<div class="card-body">
+								<h5 class="card-title">NFA to DFA Converter</h5>
+								<p class="card-text">
+									Convert non-deterministic finite automata (NFAs) to
+									deterministic ones (DFAs) seamlessly with our robust
+									algorithms.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="nfa2dfa.html" class="btn btn-primary w-100"
+									>Convert Now</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="images/nfa2regex.png"
+								class="card-img-top"
+								alt="FSM to RE" />
+							<div class="card-body">
+								<h5 class="card-title">FSM to Regular Expression</h5>
+								<p class="card-text">
+									Transform finite state machines into regular expressions and
+									vice versa to analyze patterns and simplify designs.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="fsm2regex.html" class="btn btn-primary w-100"
+									>Convert FSM</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about" class="py-5 bg-light">
+			<div class="container">
+				<h2 class="mb-4 text-center">About TOC Lab</h2>
+				<p class="lead text-center">
+					TOC Lab is an innovative toolkit designed to help you explore and
+					understand the fascinating world of automata theory and formal
+					languages. Whether you are a student, educator, or researcher, our
+					tools make it easy to simulate, create, and optimize finite automata.
+				</p>
+			</div>
+		</section>
+
+		<footer class="custom-footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row gy-4">
+						<div class="col-lg-4">
+							<h3 class="footer-brand">TOC Lab</h3>
+							<p class="footer-text">
+								Exploring the world of theoretical computer science through
+								interactive tools and visualizations.
+							</p>
+						</div>
+						<div class="col-lg-4">
+							<h4>Quick Links</h4>
+							<ul class="footer-links">
+								<li><a href="home.html">Home</a></li>
+								<li>
+									<a href="fsm-simulator.html"
+										>Finite State Machine Simulator</a
+									>
+								</li>
+								<li>
+									<a href="custom-automata-creator.html"
+										>Custom Automata Creator</a
+									>
+								</li>
+								<li><a href="minimizer.html">DFA Minimizer</a></li>
+								<li><a href="nfa2dfa.html">NFA to DFA Converter</a></li>
+								<li><a href="fsm2regex.html">FSM to Regular Expression</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-4">
+							<h4>Contact Info</h4>
+							<ul class="footer-contact">
+								<li>SGSITS Indore , M.P , India</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p class="mb-0">&copy; 2025 TOC Lab. All Rights Reserved.</p>
+							<p class="credits">
+								Designed and Developed by Divyansh Muley, Ansh Jain, Karina
+								Rajawat, Sujata More, Kartik Baghel
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+{
+	"name": "automata-lib",
+	"version": "1.0.0",
+	"description": "A JavaScript library for working with automata, finite-state machines, and formal grammars.",
+	"author": "Divyansh , Ansh , Karina , Sujata , Kartik",
+	"keywords": [
+		"automata",
+		"finite-state machines",
+		"formal grammars",
+		"regular expressions",
+		"context-free languages",
+		"chomsky hierarchy"
+	],
+	"main": "./lib/index.js",
+	"scripts": {
+		"test": "grunt test --verbose",
+		"build": "grunt build",
+		"benchmark": "node ./benchmarks/run.js"
+	},
+	"dependencies": {
+		"cli-table": "^0.2.0",
+		"structure.js": "^0.0.x"
+	},
+	"devDependencies": {
+		"benchtable": "^0.0.2",
+		"grunt": "^1.6.1",
+		"grunt-cli": "^1.4.3",
+		"grunt-contrib-concat": "^2.0.0",
+		"grunt-contrib-jshint": "^3.0.0",
+		"grunt-contrib-uglify": "^5.0.0",
+		"grunt-jasmine-node": "^0.1.0",
+		"grunt-jsvalidate": "^0.2.1",
+		"istanbul": "^0.4.5",
+		"jasmine-node": "^1.7.0"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"directories": {
+		"lib": "lib"
+	},
+	"license": "ISC"
+}
